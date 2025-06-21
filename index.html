@@ -1,12 +1,29 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Telegram Mini App</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  </head>
-  <body>
-    <h1>🖐️ হ্যালো Telegram ইউজার!</h1>
-    <p>এই অ্যাপটা Telegram-এর ভেতরে কাজ করছে!</p>
-    <button onclick="Telegram.WebApp.close()">বন্ধ করুন</button>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telegram Mini App with Ads</title>
+    <script src='//libtl.com/sdk.js' data-zone='9476905' data-sdk='show_9476905'></script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 100px;">
+
+    <h1>👋 Welcome to Our Telegram Mini App</h1>
+    <p>Click the button below to watch an ad and get your reward!</p>
+
+    <button onclick="showAd()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+        🎁 Watch Ad & Get Reward
+    </button>
+
+    <script>
+        function showAd() {
+            show_9476905().then(() => {
+                alert('✅ You have seen an ad and earned a reward!');
+            }).catch(() => {
+                alert('⚠️ Ad failed to load.');
+            });
+        }
+    </script>
+
+</body>
 </html>
